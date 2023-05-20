@@ -1,3 +1,6 @@
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
     body{
@@ -30,7 +33,7 @@
 
     .navbar{
         height: 100px;
-        width: 100%;
+        position: relative;
         background-color:azure;
     }
 
@@ -53,7 +56,6 @@
         float: left;
         /* height: 100px;
         width: 160px; */
-        display: flex;
         background-color: azure;
         align-items: center;
          display: flex; 
@@ -72,18 +74,29 @@
 
     .navB{
         height : 5px;
-        width: 100%;
+        /* width: 100%; */
         background-color: gold;
     }
 
     .TR{
         background-attachment: fixed;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size:cover;
         /* backdrop-filter: ; */
         background-image: url("https://fractory.com/wp-content/uploads/2022/10/types-of-welding-MIG.jpg");
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
+    }
+
+    .nav-ex button{
+        float: right;
+        height: 50px;
+        width: 50px;
+        border: none;
+        background:transparent;
+        margin-top: 22px;
+        display: none;
+        /* heigh; */
     }
 
     @keyframes top{
@@ -94,9 +107,20 @@
             opacity: 1;
         }
     }
+
+    @media screen and (max-width: 800px) {
+        .navbar ul li{
+            display: none;
+        }
+
+        .nav-ex button{
+            display: block;
+        }
+    }
 </style>
 <html>
-    <title>JGRI</title>
+    <title>JGIRI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <body onload="loaderRemove()">
     <div class="loader">
         <img src="https://cdn.dribbble.com/users/50064/screenshots/2265839/media/10396ee0bb71435e16fc9f436ec841c2.gif">
@@ -109,6 +133,9 @@
                 <li><a>Products</a></li>
                 <li><a>Contact Us</a></li>
             </ul>
+            <div class="nav-ex">
+                <button><i class="fa fa-bars" aria-hidden="true" style="font-size: 35px;"></i></button>
+            </div>
         </div>
         <div class="navB"></div>
         <div class="TR">
