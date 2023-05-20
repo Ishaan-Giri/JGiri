@@ -1,0 +1,130 @@
+<style>
+
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .loader{
+         position:absolute;
+         z-index: 1;
+         width: 100%;
+         height: 100%;
+         /* background-color: red; */
+         padding: 0;
+         margin: 0;
+         align-items: center;
+         display: flex; 
+         justify-content: center; 
+    }
+
+    .loader img{
+        margin: 0 auto;
+        height: 250px;
+        width: 250px;
+    }
+
+    .main{
+        display: none;
+        animation: top 1.5s;
+    }
+
+    .navbar{
+        height: 100px;
+        width: 100%;
+        background-color:azure;
+    }
+
+    .navbar img{
+        height: 80px;
+        width: 80px;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .navbar ul{
+        list-style-type: none;
+        float: right;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul li{
+        float: left;
+        /* height: 100px;
+        width: 160px; */
+        display: flex;
+        background-color: azure;
+        align-items: center;
+         display: flex; 
+         justify-content: center; 
+    }
+
+    .navbar ul a{
+        padding: 40.5px 39px;
+        font-family: candara;
+        font-weight: bolder;
+    }
+
+    .navbar ul a:hover{
+        background-color: gold;
+    }
+
+    .navB{
+        height : 5px;
+        width: 100%;
+        background-color: gold;
+    }
+
+    .TR{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        backface-visibility: 5;
+        background-image: url("https://fractory.com/wp-content/uploads/2022/10/types-of-welding-MIG.jpg");
+        width: 100%;
+        height: 100%;
+    }
+
+    @keyframes top{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+</style>
+<html>
+    <title>JGRI</title>
+<body onload="loaderRemove()">
+    <div class="loader">
+        <img src="https://cdn.dribbble.com/users/50064/screenshots/2265839/media/10396ee0bb71435e16fc9f436ec841c2.gif">
+    </div>
+    <div class="main">
+        <div class="navbar">
+            <img src = "https://raw.githubusercontent.com/Ishaan-Giri/Web-develop/main/LOGO%20(1).png">
+            <ul>
+                <li><a style="background-color: gold;">About Us</a></li>
+                <li><a>Products</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="navB"></div>
+        <div class="TR">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function loader(){
+        document.getElementsByClassName("loader")[0].style.display = "none";
+        document.getElementsByClassName("main")[0].style.display = "block";
+    }
+
+    function loaderRemove(){
+        myVar = setTimeout(loader, 5000);
+    }
+    
+</script>
